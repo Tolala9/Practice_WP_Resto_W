@@ -1,34 +1,27 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Restaurant</title> 
-	<link rel="stylesheet" href="style.css" type="text/css">
-</head>
+<?php 
+/**
+ * The main template file 
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the swo required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Resto
+ */
 
+get_header();
+?>
 
-<body>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
-	<header>
-		<div class="wrapper">
-			<h1 class="logo">Resto</h1>
-			<nav>
-				<h2>Main navigation</h2>
-				<ul>
-					<li><a href="#">Our Story</a></li>
-					<li><a href="#">Menu</a></li>
-					<li><a href="#">Reservations</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Reviwes</a></li>
-				</ul>
-			</nav> 
-		</div>
-	</header>
-
-	<!-- Start homepage content -->
+		<!-- Start homepage content -->
 	
-	<div id="main-banner">
-		<img src="images/Banner.jpg" alt="Welcome to Resto">
+	<div id="main-banner"> 
+		<img src="<?php echo(get_template_directory_uri()); ?>/images/Banner.jpg" alt="Welcome to Resto">
 	</div>
 	
 	<div class="wrapper"></div>
@@ -81,25 +74,25 @@
 	<section id="featured">
 		<ul>
 			<li>
-				<img src="images/Thumb_1.jpg" alt="">
+				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
 				<a href="#">Fugiat nulla sint</a>
 				<span>$30</span>
 				<span class="rating"></span>
 			</li>
 			<li>
-				<img src="images/Thumb_1.jpg" alt="">
+				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
 				<a href="#">Fugiat nulla sint</a>
 				<span>$30</span>
 				<span class="rating"></span>
 			</li>
 			<li>
-				<img src="images/Thumb_1.jpg" alt="">
+				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
 				<a href="#">Fugiat nulla sint</a>
 				<span>$30</span>
 				<span class="rating"></span>
 			</li>
 			<li>
-				<img src="images/Thumb_1.jpg" alt="">
+				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
 				<a href="#">Fugiat nulla sint</a>
 				<span>$30</span>
 				<span class="rating"></span>
@@ -109,33 +102,10 @@
 	</div>
 
 	<!-- End homepage content -->
-	
-	<footer>
-		<div class="wrapper">
-			<ul>
-				<li>New Yourk Restaurant</li>
-				<li>3926 Anmoore Road</li>
-				<li>New Yourk, NY 10014</li>
-				<li>718-749-1714</li>
-			</ul>
-			<ul>
-				<li>France Restaurant</li>
-				<li>68, rue de la Couronne</li>
-				<li>75002 PARIS</li>
-				<li>02.94.23.69.56</li>
-			</ul>
-			<ul>
-				<li>Blog</li>
-				<li>Careers</li>
-				<li>Privacy Policy</li>
-				<li>Contact</li>
-			</ul>
-			<ul>
-				<li><img src="images/logo_footer.png" alt="Logo"></li>
-				<li>&copy; All Rights Reserved 2018.</li>
-				
-			</ul>
-		</div>
-	</footer>
-</body>
-</html>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+
+get_footer(); ?>

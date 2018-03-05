@@ -1044,7 +1044,7 @@ header nav li a{
     text-indent: -10000px;
     margin: 0 auto;
     position: relative;
-    top: -4px;
+    top: -7px;
 }
 
 #home-menu ul{
@@ -1161,4 +1161,42 @@ footer li{
 footer a{
     color: #eee;
     text-decoration: none;
+}
+
+
+
+footer.entry-footer{
+	padding: 10px;
+	background-color: #eee;
+	margin-right: 1100px;
+}
+footer.entry-footer a{
+	color: #333;
+}
+
+
+
+
+#post-content{
+	float: left;
+	width: 70%;
+	clear: both;
+}
+
+#sidebar{
+	float: left;
+	width: 26%;
+	padding: 1%;
+	background: #eee;
+	margin-top: 20px;
+	margin-left: 4%;
+}
+
+.comment-list{
+	list-style-type: none;
+	padding: 0;
+}
+
+.comment-meta{
+	background-color: #eee
 }
