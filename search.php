@@ -12,6 +12,9 @@ get_header();
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
+			
+			<div class="wrapper">
+				<div id="post-content">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -46,10 +49,13 @@ get_header();
 
 		endif;
 		?>
+			</div>
+				<div id="sidebar"><?php get_sidebar(); ?></div>
+			</div> 
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
