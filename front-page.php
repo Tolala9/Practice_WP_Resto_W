@@ -72,31 +72,30 @@ get_header();
 	</section>
 
 	<section id="featured">
-		<ul>
-			<li>
-				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
-				<a href="#">Fugiat nulla sint</a>
-				<span>$30</span>
-				<span class="rating"></span>
-			</li>
-			<li>
-				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
-				<a href="#">Fugiat nulla sint</a>
-				<span>$30</span>
-				<span class="rating"></span>
-			</li>
-			<li>
-				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
-				<a href="#">Fugiat nulla sint</a>
-				<span>$30</span>
-				<span class="rating"></span>
-			</li>
-			<li>
-				<img src="<?php echo(get_template_directory_uri()); ?>/images/Thumb_1.jpg" alt="">
-				<a href="#">Fugiat nulla sint</a>
-				<span>$30</span>
-				<span class="rating"></span>
-			</li>
+		<ul> 
+			
+			<?php /* Start the Loop */  ?>
+			
+
+			<?php $myquery = new WP_Query('category_name=menu-items&posts_per_page=4'); ?>
+
+			<?php while ( $myquery->have_posts() ) : $myquery->the_post(); ?>
+
+				<li>
+					<?php the_post_thumbnail(); ?>
+					<a href="<?php echo the_permalink(); ?>"> <?php  the_title(); ?></a>
+					<span> <?php echo get_post_meta($post->ID, 'Price', true); ?></span>
+					<span class="star-<?php echo get_post_meta($post->ID, 'rating', true); ?> rating"></span>
+
+
+				</li>
+				
+
+	  	<?php endwhile; ?>
+
+			 
+		
+
 		</ul>
 	</section>
 	</div>

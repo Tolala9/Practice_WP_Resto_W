@@ -481,7 +481,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 60px;
 }
 
 ul {
@@ -1008,6 +1008,7 @@ h1.logo{
 
 header nav{
     float: right;
+    margin-top: 15px;
 }
 
 header nav h2{
@@ -1152,7 +1153,7 @@ footer ul{
     padding: 0;
     list-style-type: none;
     color: #eee;
-    width: 18%;
+    width: 17%;
     margin-right: 2%;
 }
 footer li{
@@ -1198,5 +1199,30 @@ footer.entry-footer a{
 }
 
 .comment-meta{
-	background-color: #eee
+	background-color: #eee;
+}
+
+
+.rating{
+	height: 12px;
+	background: url(images/Star.png);
+	float: none !important;
+	display: block;
+	clear: both;
+}
+
+.rating.star-5{
+	width: 60px;
+}
+.rating.star-4{
+	width: 48px;
+}
+.rating.star-3{
+	width: 36px;
+}
+.rating.star-2{
+	width: 24px;
+}
+.rating.star-1{
+	width: 12px;
 }
