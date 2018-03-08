@@ -37,6 +37,9 @@
 			<ul>
 				<li><img src="<?php echo(get_template_directory_uri()); ?>/images/logo_footer.png" alt="Logo"></li>
 				<li>&copy; All Rights Reserved 2018.</li>
+				
+				<?php dynamic_sidebar( 'footer' ); ?>
+
 			</ul>
 
 		</div><!-- .site-info -->
